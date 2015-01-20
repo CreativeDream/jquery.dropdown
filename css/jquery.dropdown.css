@@ -1,0 +1,122 @@
+/*!
+ * CSS DropDown
+ * Copyright (c) 2013 CreativeDream
+ * Version: 1.2 (04-11-2013)
+*/
+#dropdown {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 160px;
+    padding: 5px 0;
+    margin: 10px;
+    background: #FFF;
+    border: 1px solid #ddd;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+#dropdown.arrow-down {
+    -webkit-box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.3);
+}
+
+#dropdown:before {
+    position: absolute;
+    top: -7px;
+    right: 9px;
+    display: inline-block;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid #ccc;
+    border-left: 7px solid transparent;
+    content: '';
+}
+
+#dropdown:after {
+    position: absolute;
+    top: -6px;
+    right: 10px;
+    display: inline-block;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid #FFF;
+    border-left: 6px solid transparent;
+    content: '';
+}
+
+#dropdown.arrow-left:before {
+    right: auto;
+    left: 9px;
+}
+
+#dropdown.arrow-left:after {
+    right: auto;
+    left: 10px;
+}
+
+#dropdown.arrow-down:before {
+    top: auto;
+    bottom: -7px;
+    border-bottom: none;
+    border-top: 7px solid #ccc;
+}
+
+#dropdown.arrow-down:after {
+    top: auto;
+    bottom: -6px;
+    border-bottom: none;
+    border-top: 6px solid #FFF;
+}
+
+#dropdown ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#dropdown ul li {
+    position: relative;
+}
+
+#dropdown ul li a {
+    display: block;
+    padding: 5px 20px;
+    clear: both;
+    cursor: pointer;
+    font-family: sans-serif;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 20px;
+    color: inherit;
+    white-space: nowrap;
+    text-align: left;
+    text-decoration: none;
+}
+
+#dropdown ul li a:hover,
+#dropdown ul li a:focus {
+    color: #494949;
+    background: #f5f5f5;
+    text-decoration: none;
+}
+
+#dropdown ul li a:active {
+    color: #fff;
+    background: #3C93CE;
+}
+
+#dropdown ul li.divider {
+    height: 1px;
+    margin: 6px 1px;
+    display: block;
+    overflow: hidden;
+    background-color: #e5e5e5;
+    cursor: default;
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>jQuery DropDown | CreativeDream</title>
+    
+    <!--Stylesheets-->
+    <link href="css/jquery.dropdown.css" type="text/css" rel="stylesheet" />
+    
+    <!--jQuery-->
+    <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery.dropdown.min.js"></script>
+    <script>
+	   
+	   $(document).ready(function(e) {
+		   
+           $(".dropdown").dropdown({
+			   
+			   template : function(r){ return "<li><a>"+r.text+"</a></li>"; },
+			   buttons:[
+			       //Button 1
+				   {
+					   text: 'Delete', //Inner HTML
+					   href: '', //<a> href
+					   addClass: 'custom-button', //<li> Class 
+					   onClick: function(p,e){
+						   alert('Look in console!'); 
+						   console.log(p); //Parent (a.dropdown)
+						   console.log(e); //Clicked button 
+						   return true; //Return true - will close dropdown, false - will keep dropwdown 
+					   }
+				   },
+				   
+				   // Separator
+				   {}, 
+				   
+				   //Button 2
+				   {
+                       text: 'Options',
+                       href: '',
+                       addClass: '',
+                       onClick: function(p, e){ alert('Function return false!'); return false; } 
+                   },
+				   
+				   //Button 3
+				   {
+                       text: 'Properties',
+                       href: '',
+                       addClass: '',
+                       onClick: function(p,e){ alert(p.attr('rel')); return true; } 
+                   }
+			   ]
+			   
+		   });
+		    
+       });
+	</script>
+    
+    <style>
+	#dropdown ul li.custom-button a{
+		color:#961D2C;
+	}
+	#dropdown ul li.custom-button a:active{
+		color:#fff;
+	}
+	</style>
+    
+    <!--[if IE]>
+          <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+          
+    <![endif]-->
+</head>
+
+<body>
+    <h1>jQuery DropDown 1.2</h1>
+    <p>Simple DropDown Menu</p>
+    <hr />
+    <h3>Demo:</h3>
+    
+    <!-- Button -->
+    <div align="center">
+        <a href="#" class="dropdown" rel="I am parent 1!">DropDown</a>
+    </div>
+    
+    <br />
+    <h4>This script is including:</h4>
+    <ul>
+      <li>Jquery Code - <i>jquery.dropdown.js</i></li>
+      <li>CSS Code - <i>jquery.dropdown.css</i></li>
+    </ul> 
+    <h4>This script Requires:</h4>
+    <ul>
+      <li>Jquery library - <i>jquery-1.8.2.min.js</i></li>
+    </ul>
+    <br />
+    &copy; 2013 <b>CreativeDream</b>.
+</body>
+</html>
