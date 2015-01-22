@@ -14,6 +14,6 @@
   "description": "Simple dropdown menus to nearly anything with this simple plugin.",
   "license": "MIT",
   "dependencies": {
-    "jquery": ">= 1.7.2",
+    "jquery": ">= 1.7.2"
   }
 }
