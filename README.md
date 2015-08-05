@@ -3,7 +3,7 @@ jquery.dropdown 1.2
 
 Simple dropdown menus to nearly anything with this simple plugin.
 
-__<a href="http://creativedream.net/plugins/jquery.dropdown/" target="_blank">Demo Page</a>__
+__<a href="http://grandesign.md/__cr/plugins/jquery.dropdown/" target="_blank">Demo Page</a>__
 
 Usage
 -------
